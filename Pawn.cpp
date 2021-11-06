@@ -11,14 +11,10 @@ class Pawn : public Piece {
         if(getColor() == 'W'){
             if(getX() == x2 && y2 == getY() + 1 && p2->getColor() == 'N'){
                 p2->exchange(this);
-                setChar('N');
-                setColor('N');
                 return true;
             } else {
                 if((getX() + 1 == x2 || getX()-1 == x2) && getY() + 1 == y2 && p2->getColor() == 'B'){
                     p2->exchange(this);
-                    setChar('N');
-                    setColor('N');
                     return true;
                 } else {
                     return false;
@@ -28,14 +24,10 @@ class Pawn : public Piece {
             if(getColor() == 'B'){
                 if(getX() == x2 && y2 == getY() - 1 && p2->getColor() == 'N'){
                     p2->exchange(this);
-                    setChar('N');
-                    setColor('N');
                     return true;
                 } else {
                     if((getX() + 1 == x2 || getX()-1 == x2) && getY() - 1 == y2 && p2->getColor() == 'W'){
                         p2->exchange(this);
-                        setChar('N');
-                        setColor('N');
                         return true;
                     } else {
                         return false;

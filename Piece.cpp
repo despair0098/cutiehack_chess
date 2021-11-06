@@ -23,6 +23,8 @@ class Piece{
             this->y = p2->getY();
             this->pieceChar = p2->getChar();
             this->pieceColor = p2->getColor();
+            setChar('N');
+            setColor('N');
         }
         bool move(Piece* p2);
 

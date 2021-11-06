@@ -9,8 +9,6 @@ class Pawn : public Piece {
         if(abs(p2->getX() - getX()) == 1){
             if(abs(p2->getY() - getY()) == 1){
                 p2->exchange(this);
-                setChar('N');
-                setColor('N');
             } else {
                 return false;
             }
