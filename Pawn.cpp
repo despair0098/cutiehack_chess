@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Piece.cpp"
 
 class Pawn : public Piece {
