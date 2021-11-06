@@ -2,13 +2,13 @@
 
 class Piece{
     private:
-        char pieceColor = "N";
-        char pieceChar = "N";
+        char pieceColor = 'N';
+        char pieceChar = 'N';
         int x;
         int y;
 
     public:
-        Piece(char color, int x1, int y1):piecrColor(color), x(x1), y(y1){};
+        Piece(char color, int x1, int y1):pieceColor(color), x(x1), y(y1){};
         ~Piece(){}  
         char getColor(){return pieceColor;}
         int getX(){return x;}
@@ -26,4 +26,4 @@ class Piece{
         }
         bool move(Piece* p2);
 
-}
+};
