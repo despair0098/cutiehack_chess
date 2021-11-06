@@ -2,8 +2,8 @@
 
 class Piece{
     private:
-        char pieceColor;
-        char pieceChar;
+        char pieceColor = "N";
+        char pieceChar = "N";
         int x;
         int y;
 
@@ -15,6 +15,15 @@ class Piece{
         int getY(){return y;}
         void setX(int x1){x = x1;}
         void setY(int y1){y = y1;}
-        virtual char getChar() = 0;
+        void setChar(char c){pieceChar=c;}
+        void setColor(char c){pieceColor=c;}
+        char getChar();
+        void exchange(Piece* p2){
+            this->x = p2->getX();
+            this->y = p2->getY();
+            this->pieceChar = p2->getChar();
+            this->pieceColor = p2->getColor();
+        }
+        bool move(Piece* p2);
 
 }
