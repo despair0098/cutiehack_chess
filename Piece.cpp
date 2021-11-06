@@ -1,6 +1,6 @@
 #include <iostream>
 
-class Pieces{
+class Piece{
     private:
         char pieceColor;
         char pieceChar;
@@ -8,7 +8,7 @@ class Pieces{
         int y;
 
     public:
-        Piece(char color):piecrColor(color){}
+        Piece(char color, int x1, int y1):piecrColor(color), x(x1), y(y1){};
         ~Piece(){}  
         char getColor(){return pieceColor;}
         int getX(){return x;}
