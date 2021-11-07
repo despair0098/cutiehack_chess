@@ -20,6 +20,20 @@ class Piece{
         void setColor(char c){pieceColor=c;}
         char getChar();
         bool isMoveable(Piece& p2);
+        void setNull()
+        {
+            this->pieceColor = 'N';
+            this->pieceChar = 'N';
+        }
+        void move(Piece &p2)
+        {
+            if (isMoveable(p2))
+            {
+                p2.setColor(this->pieceColor);
+                p2.setChar(this->pieceChar);
+                setNull();
+            }
+        };
 
         void castle(int x, int y) {
             if(this->pieceChar == 'K' && this->firstMove) {
