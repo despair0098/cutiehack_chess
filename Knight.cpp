@@ -1,3 +1,7 @@
+#include "Piece.cpp"
+
+class Knight : public Piece {
+    Knight();
 #include <iostream>
 #include "Piece.cpp"
 
@@ -12,5 +16,4 @@ class Knight : public Piece {
             return false;
         }
     }
-
 };
