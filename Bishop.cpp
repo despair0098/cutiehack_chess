@@ -9,7 +9,6 @@ class Bishop : public Piece {
         if(abs(p2.getX() - getX()) == abs(p2.getY() - getY())){
             int xIncrement = (p2.getX() - getX()) / abs(p2.getX() - getX());
             int yIncrement = (p2.getY() - getY()) / abs(p2.getY() - getY());
-
         } else {
             return false;
         }
